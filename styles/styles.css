@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  scroll-behavior: smooth;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  background: rgb(255, 255, 255);
+  border-right: 1px solid black;
+  width: 150px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+.sidebar li {
+  transform: rotate(-90deg);
+  max-width: 380px;
+  width: 100%;
+}
+.sidebar li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #000;
+}
+.sidebar li a:visited {
+  color: #000;
+}
+
+main {
+  margin-left: 150px;
+}
+main .home {
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+  padding: 4rem;
+}
+main .home .contentphototext {
+  display: flex;
+  justify-content: space-between;
+}
+main .home .contentphototext .namework {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+main .home .contentphototext .namework h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 7.5rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+main .home .contentphototext .namework .work p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+main .home .contentphototext .photographer {
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  min-height: 200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.image-container {
+  height: 600px;
+  width: 100%;
+  animation-name: zoom-image-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+.image-container.active {
+  animation: zoom-image-in 0.5s ease-out 1 forwards;
+}
+.image-container.active .image {
+  animation: scale-in 0.5s ease-out 1 forwards;
+}
+.image-container.shadow .image {
+  position: relative;
+}
+.image-container.shadow .image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: bg-fade-in 0.5s ease-out 1 forwards;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  animation: scale-out 0.5s ease-out 1 forwards;
+}
+.image:before {
+  animation: bg-fade-out 0.5s ease-out 1 forwards;
+}
+.image.image-one {
+  background-image: url(../img/photo1.jpg);
+}
+.image.image-two {
+  background-image: url(../img/photo2.jpg);
+}
+.image.image-three {
+  background-image: url(../img/photo3.jpg);
+}
+.image.image-four {
+  background-image: url(../img/photo4.jpg);
+}
+.image.image-five {
+  background-image: url(../img/photo5.jpg);
+}
+
+@keyframes zoom-image-in {
+  from {
+    width: 25%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes zoom-image-out {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 25%;
+  }
+}
+@keyframes scale-in {
+  from {
+    transform: none;
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes scale-out {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes bg-fade-in {
+  from {
+    background: none;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes bg-fade-out {
+  from {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  to {
+    background: none;
+  }
+}/*# sourceMappingURL=styles.css.map */

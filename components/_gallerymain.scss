@@ -1,0 +1,120 @@
+@import '../abstract/variables';
+
+.container {
+    width: 100%;
+    min-height: 200px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .image-container {
+    height: 600px;
+    width: 100%;
+    animation-name: zoom-image-out;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    &.active {
+      animation: zoom-image-in .5s ease-out 1 forwards;
+      
+      .image {
+        animation: scale-in .5s ease-out 1 forwards;
+      }
+    }
+    &.shadow {
+      .image {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          animation: bg-fade-in .5s ease-out 1 forwards;
+        }
+      }
+    }
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    animation: scale-out .5s ease-out 1 forwards;
+    &:before {
+      animation: bg-fade-out .5s ease-out 1 forwards;
+    }
+    &.image-one {
+        background-image: url(../img/photo1.jpg);
+    }
+    &.image-two {
+        background-image: url(../img/photo2.jpg);
+    }
+    &.image-three {
+        background-image: url(../img/photo3.jpg);
+    }
+    &.image-four {
+      background-image: url(../img/photo4.jpg);
+    }
+    &.image-five {
+        background-image: url(../img/photo5.jpg);
+      }
+  }
+  
+  @keyframes zoom-image-in {
+    from {
+      width: 25%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes zoom-image-out {
+    from {
+        width: 100%;
+      }
+      to {
+        width: 25%;
+      }
+  }
+  
+  @keyframes scale-in {
+    from {
+      transform: none;
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  @keyframes scale-out {
+    from {
+      transform: scale(1.2);
+    }
+    to {
+      transform: none;
+    }
+  }
+  
+  @keyframes bg-fade-in {
+    from {
+      background: none;
+    }
+    to {
+      background: rgba(0,0,0,.5);
+    }
+  }
+  
+  @keyframes bg-fade-out {
+    from {
+      background: rgba(0,0,0,.5);
+    }
+    to {
+      background: none;
+    }
+  }
