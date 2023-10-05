@@ -18,6 +18,7 @@
 .jstabcontent.ativo {
   display: block;
   animation: animationText 0.6s forwards;
+  margin-left: 150px;
 }
 
 @keyframes animationText {
@@ -47,8 +48,6 @@
 }
 .sidebar li {
   transform: rotate(-90deg);
-  max-width: 380px;
-  width: 100%;
 }
 .sidebar li a {
   font-family: "Montserrat", sans-serif;
@@ -60,38 +59,36 @@
   color: #000;
 }
 
-main {
+.jstabcontent.ativo {
   margin-left: 150px;
-}
-main .home {
   display: flex;
   flex-direction: column;
-  gap: 37px;
+  gap: 100px;
   padding: 2rem;
 }
-main .home .contentphototext {
+.jstabcontent.ativo .contentphototext {
   display: flex;
   justify-content: space-between;
 }
-main .home .contentphototext .namework {
+.jstabcontent.ativo .contentphototext .namework {
   text-align: right;
   display: flex;
   flex-direction: column;
 }
-main .home .contentphototext .namework h1 {
+.jstabcontent.ativo .contentphototext .namework h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 7.5rem;
   font-weight: 600;
   display: flex;
   flex-direction: column;
 }
-main .home .contentphototext .namework .work p {
+.jstabcontent.ativo .contentphototext .namework .work p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   font-style: italic;
 }
-main .home .contentphototext .photographer {
+.jstabcontent.ativo .contentphototext .photographer {
   border-radius: 50%;
 }
 
@@ -103,40 +100,15 @@ main .home .contentphototext .photographer {
   align-items: center;
   gap: 10px;
 }
-
-.image-container {
+.container .image-container {
   height: 600px;
   width: 100%;
-  animation-name: zoom-image-out;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
   overflow: hidden;
 }
-.image-container:nth-child(even) {
+.container .image-container:nth-child(even) {
   height: 500px;
 }
-.image-container.active {
-  animation: zoom-image-in 0.5s ease-out 1 forwards;
-}
-.image-container.active .image {
-  animation: scale-in 0.5s ease-out 1 forwards;
-}
-.image-container.shadow .image {
-  position: relative;
-}
-.image-container.shadow .image:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  animation: bg-fade-in 0.5s ease-out 1 forwards;
-}
-
-.image {
+.container .image-container .image {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -144,73 +116,22 @@ main .home .contentphototext .photographer {
   background-size: auto;
   animation: scale-out 0.5s ease-out 1 forwards;
 }
-.image:before {
-  animation: bg-fade-out 0.5s ease-out 1 forwards;
-}
-.image.image-one {
+.container .image-container .image.image-one {
   background-image: url(../img/photo1.jpg);
 }
-.image.image-two {
+.container .image-container .image.image-two {
   background-image: url(../img/photo2.jpg);
 }
-.image.image-three {
+.container .image-container .image.image-three {
   background-image: url(../img/photo3.jpg);
 }
-.image.image-four {
+.container .image-container .image.image-four {
   background-image: url(../img/photo4.jpg);
 }
-.image.image-five {
+.container .image-container .image.image-five {
   background-image: url(../img/photo5.jpg);
 }
 
-@keyframes zoom-image-in {
-  from {
-    width: 25%;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes zoom-image-out {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 25%;
-  }
-}
-@keyframes scale-in {
-  from {
-    transform: none;
-  }
-  to {
-    transform: scale(1.2);
-  }
-}
-@keyframes scale-out {
-  from {
-    transform: scale(1.2);
-  }
-  to {
-    transform: none;
-  }
-}
-@keyframes bg-fade-in {
-  from {
-    background: none;
-  }
-  to {
-    background: rgba(0, 0, 0, 0.5);
-  }
-}
-@keyframes bg-fade-out {
-  from {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  to {
-    background: none;
-  }
-}
 .sobre {
   background-color: white;
   height: 100vh;
