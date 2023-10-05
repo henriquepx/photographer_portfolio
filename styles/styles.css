@@ -66,8 +66,8 @@ main {
 main .home {
   display: flex;
   flex-direction: column;
-  gap: 65px;
-  padding: 4rem;
+  gap: 37px;
+  padding: 2rem;
 }
 main .home .contentphototext {
   display: flex;
@@ -100,6 +100,8 @@ main .home .contentphototext .photographer {
   min-height: 200px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .image-container {
@@ -111,6 +113,9 @@ main .home .contentphototext .photographer {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   overflow: hidden;
+}
+.image-container:nth-child(even) {
+  height: 500px;
 }
 .image-container.active {
   animation: zoom-image-in 0.5s ease-out 1 forwards;
@@ -205,4 +210,8 @@ main .home .contentphototext .photographer {
   to {
     background: none;
   }
+}
+.sobre {
+  background-color: white;
+  height: 100vh;
 }/*# sourceMappingURL=styles.css.map */

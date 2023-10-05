@@ -5,6 +5,8 @@
     min-height: 200px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
+    gap: 10px;
   }
   .image-container {
     height: 600px;
@@ -15,6 +17,9 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     overflow: hidden;
+    &:nth-child(even) {
+      height: 500px;
+    }
     &.active {
       animation: zoom-image-in .5s ease-out 1 forwards;
       

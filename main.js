@@ -1,8 +1,3 @@
-$('.image-container').hover(function() {
-  $('.image-container').toggleClass('shadow');
-  $(this).toggleClass('active shadow');
-});
-
 const tabMenu = document.querySelectorAll('.jstabmenu');
 const tabContent = document.querySelectorAll('.jstabcontent');
 
