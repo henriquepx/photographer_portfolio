@@ -32,3 +32,56 @@
       opacity: 1;
     }
   }
+
+  @keyframes animationName {
+    from {
+      transform: translate3d(500px, 0, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes showingDescription {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes animationPhotoLeft {
+    from {
+      transform: translate3d(-350px, 0, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes animationPhotoMiddle {
+    from {
+      transform: translate3d(0, 350px, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes animationPhotoRight {
+    from {
+      transform: translate3d(350px, 0, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }

@@ -31,6 +31,54 @@
     opacity: 1;
   }
 }
+@keyframes animationName {
+  from {
+    transform: translate3d(500px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes showingDescription {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animationPhotoLeft {
+  from {
+    transform: translate3d(-350px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes animationPhotoMiddle {
+  from {
+    transform: translate3d(0, 350px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes animationPhotoRight {
+  from {
+    transform: translate3d(350px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 .sidebar {
   position: fixed;
   background: rgb(255, 255, 255);
@@ -80,12 +128,17 @@
   font-weight: 600;
   display: flex;
   flex-direction: column;
+  animation: animationName 1.3s forwards;
+}
+.home .contentphototext .namework h1 span {
+  animation: animationName 2s forwards;
 }
 .home .contentphototext .namework .work p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   font-style: italic;
+  animation: showingDescription 2s forwards;
 }
 .home .contentphototext .photographer {
   border-radius: 50%;
@@ -117,18 +170,23 @@
 }
 .container .image-container .image.image-one {
   background-image: url(../img/photo1.jpg);
+  animation: animationPhotoLeft 1.5s forwards;
 }
 .container .image-container .image.image-two {
   background-image: url(../img/photo2.jpg);
+  animation: animationPhotoLeft 1s forwards;
 }
 .container .image-container .image.image-three {
   background-image: url(../img/photo3.jpg);
+  animation: animationPhotoMiddle 1s forwards;
 }
 .container .image-container .image.image-four {
   background-image: url(../img/photo4.jpg);
+  animation: animationPhotoRight 1.5s;
 }
 .container .image-container .image.image-five {
   background-image: url(../img/photo5.jpg);
+  animation: animationPhotoRight 1s;
 }
 
 .sobre {
@@ -148,6 +206,10 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 6rem;
+  animation: animationName 1.3s forwards;
+}
+.sobre .textsobre h1 span {
+  animation: animationName 2s forwards;
 }
 .sobre .textsobre p {
   font-family: "Montserrat", sans-serif;

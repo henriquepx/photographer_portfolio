@@ -17,6 +17,10 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 6rem;
+            animation: animationName 1.3s forwards;
+            span {
+                animation: animationName 2s forwards;
+            }
           }
           p {
             font-family: $font;
@@ -51,3 +55,4 @@
           }
     }
 }
+

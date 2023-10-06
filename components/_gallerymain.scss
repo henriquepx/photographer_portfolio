@@ -23,18 +23,23 @@
         animation: scale-out .5s ease-out 1 forwards;
         &.image-one {
             background-image: url(../img/photo1.jpg);
+            animation: animationPhotoLeft 1.5s forwards;
         }
         &.image-two {
             background-image: url(../img/photo2.jpg);
+            animation: animationPhotoLeft 1s forwards;
         }
         &.image-three {
             background-image: url(../img/photo3.jpg);
+            animation: animationPhotoMiddle 1s forwards;
         }
         &.image-four {
           background-image: url(../img/photo4.jpg);
+          animation: animationPhotoRight 1.5s;
         }
         &.image-five {
             background-image: url(../img/photo5.jpg);
+            animation: animationPhotoRight 1s;
           }
       }
     }
