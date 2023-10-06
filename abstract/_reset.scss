@@ -17,13 +17,14 @@
   
   .jstabcontent.ativo {
     display: block;
-    animation: animationText .6s forwards;
+    animation: animationSection 1s forwards;
     margin-left: 150px;
+    
   }
   
-  @keyframes animationText {
+  @keyframes animationSection {
     from {
-      transform: translate3d(-30px, 0, 0);
+      transform: translate3d(-80px, 0, 0);
       opacity: 0;
     }
     to {

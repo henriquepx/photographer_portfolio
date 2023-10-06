@@ -1,10 +1,9 @@
 @import '../abstract/variables';
 
-.jstabcontent.ativo {
-      margin-left: 150px;
+.home {
       display: flex;
       flex-direction: column;
-      gap: 100px;
+      gap: 40px;
       padding: 2rem;
       .contentphototext {
         display: flex;

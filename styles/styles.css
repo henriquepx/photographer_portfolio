@@ -17,13 +17,13 @@
 
 .jstabcontent.ativo {
   display: block;
-  animation: animationText 0.6s forwards;
+  animation: animationSection 1s forwards;
   margin-left: 150px;
 }
 
-@keyframes animationText {
+@keyframes animationSection {
   from {
-    transform: translate3d(-30px, 0, 0);
+    transform: translate3d(-80px, 0, 0);
     opacity: 0;
   }
   to {
@@ -35,7 +35,7 @@
   position: fixed;
   background: rgb(255, 255, 255);
   border-right: 1px solid black;
-  width: 150px;
+  width: 100px;
   height: 100%;
   top: 0;
   left: 0;
@@ -59,36 +59,35 @@
   color: #000;
 }
 
-.jstabcontent.ativo {
-  margin-left: 150px;
+.home {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 40px;
   padding: 2rem;
 }
-.jstabcontent.ativo .contentphototext {
+.home .contentphototext {
   display: flex;
   justify-content: space-between;
 }
-.jstabcontent.ativo .contentphototext .namework {
+.home .contentphototext .namework {
   text-align: right;
   display: flex;
   flex-direction: column;
 }
-.jstabcontent.ativo .contentphototext .namework h1 {
+.home .contentphototext .namework h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 7.5rem;
   font-weight: 600;
   display: flex;
   flex-direction: column;
 }
-.jstabcontent.ativo .contentphototext .namework .work p {
+.home .contentphototext .namework .work p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   font-style: italic;
 }
-.jstabcontent.ativo .contentphototext .photographer {
+.home .contentphototext .photographer {
   border-radius: 50%;
 }
 
@@ -133,6 +132,47 @@
 }
 
 .sobre {
-  background-color: white;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 2rem;
+}
+.sobre img {
+  width: 600px;
+}
+.sobre .textsobre h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6rem;
+}
+.sobre .textsobre p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  max-width: 70ch;
+}
+.sobre .textsobre .desc2 {
+  margin: 1rem 0rem 6rem 0rem;
+}
+.sobre .textsobre .rowdesc {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.sobre .textsobre .rowdesc p span {
+  font-size: 7rem;
+}
+.sobre .textsobre .rowdesc div a {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0 15px;
+}
+.sobre .textsobre .rowdesc div a:visited {
+  color: #000;
 }/*# sourceMappingURL=styles.css.map */
