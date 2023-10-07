@@ -229,12 +229,89 @@
   font-size: 7rem;
 }
 .sobre .textsobre .rowdesc div a {
+  color: #000000;
+  margin: 0 20px;
+  padding: 10px 20px;
+  position: relative;
   font-family: "Montserrat", sans-serif;
-  color: #000;
   font-weight: 600;
   font-size: 1.3rem;
-  margin: 0 15px;
+  overflow: hidden;
+  display: inline-block;
+  transition: 0.3s;
 }
-.sobre .textsobre .rowdesc div a:visited {
-  color: #000;
+.sobre .textsobre .rowdesc div a span::before {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 2px solid rgb(48, 48, 48);
+  border-left: 2px solid rgb(48, 48, 48);
+  transition: 0.3s;
+  opacity: 0;
+}
+.sobre .textsobre .rowdesc div a span::after {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-right: 2px solid rgb(48, 48, 48);
+  border-bottom: 2px solid rgb(48, 48, 48);
+  transition: 0.3s;
+  opacity: 0;
+}
+.sobre .textsobre .rowdesc div a::before {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-right: 2px solid rgb(48, 48, 48);
+  border-top: 2px solid rgb(48, 48, 48);
+  transition: 0.3s;
+  opacity: 0;
+}
+.sobre .textsobre .rowdesc div a::after {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-left: 2px solid rgb(48, 48, 48);
+  border-bottom: 2px solid rgb(48, 48, 48);
+  transition: 0.3s;
+  opacity: 0;
+}
+.sobre .textsobre .rowdesc div a:hover {
+  color: rgb(48, 48, 48);
+}
+.sobre .textsobre .rowdesc div a:hover::before {
+  opacity: 1;
+  right: 5px;
+  top: 5px;
+}
+.sobre .textsobre .rowdesc div a:hover::after {
+  opacity: 1;
+  left: 5px;
+  bottom: 5px;
+}
+.sobre .textsobre .rowdesc div a:hover span::before {
+  opacity: 1;
+  left: 5px;
+  top: 5px;
+}
+.sobre .textsobre .rowdesc div a:hover span::after {
+  opacity: 1;
+  right: 5px;
+  bottom: 5px;
 }/*# sourceMappingURL=styles.css.map */
