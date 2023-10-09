@@ -34,6 +34,24 @@
               .photographer {
                 border-radius: 50%;
               }
-              
         }
-    }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    padding: 3rem 1.4rem;
+    .contentphototext {
+      flex-direction: row;
+      .namework {
+        text-align: left;
+        flex-direction: column;
+          h1 {
+            font-size: 5rem;
+          }
+            }
+            .photographer {
+              display: none;
+            }
+      }
+  }
+}

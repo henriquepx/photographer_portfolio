@@ -43,4 +43,12 @@
           }
       }
     }
+}
+
+  @media (max-width: 1024px) {
+    .container {
+      min-height: 200px;
+      flex-direction: column;
+      padding: 1rem;
+    }
   }

@@ -19,12 +19,28 @@
     display: block;
     animation: animationSection 1s forwards;
     margin-left: 150px;
-    
+  }
+
+  @media (max-width: 1024px) {
+    .jstabcontent.ativo {
+      margin-left: 0px;
+    }
   }
   
   @keyframes animationSection {
     from {
       transform: translate3d(-80px, 0, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes animationHamburger {
+    from {
+      transform: translate3d(-100%, 0, 0);
       opacity: 0;
     }
     to {

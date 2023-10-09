@@ -21,9 +21,24 @@
   margin-left: 150px;
 }
 
+@media (max-width: 1024px) {
+  .jstabcontent.ativo {
+    margin-left: 0px;
+  }
+}
 @keyframes animationSection {
   from {
     transform: translate3d(-80px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes animationHamburger {
+  from {
+    transform: translate3d(-100%, 0, 0);
     opacity: 0;
   }
   to {
@@ -79,6 +94,86 @@
     opacity: 1;
   }
 }
+header {
+  display: none;
+}
+header .danielheader {
+  width: 50px;
+  border-radius: 100%;
+}
+header .menucontactheader {
+  display: flex;
+  align-items: center;
+}
+header .menucontactheader .hamburger {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  header .menucontactheader .hamburger {
+    display: block;
+  }
+}
+header .menucontactheader .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3 ease-in-out;
+  background-color: black;
+}
+
+@media (max-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+  }
+  header .hamburger.active {
+    position: absolute;
+    transition: 0.4s;
+    right: 16px;
+    z-index: 888;
+  }
+  header .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+    background-color: #ffffff;
+    transition: 0.4s ease-in-out;
+  }
+  header .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #ffffff;
+    transition: 0.4s ease-in-out;
+  }
+  header .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #ffffff;
+    transition: 0.4s ease-in-out;
+  }
+}
+.menu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .menu.active {
+    display: block;
+    position: absolute;
+    z-index: 300;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    animation: animationHamburger 0.6s forwards;
+    bottom: 0;
+    position: absolute;
+    padding: 2rem 3rem;
+  }
+  .menu.active .navmenu ul li a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: #fff;
+  }
+}
 .sidebar {
   position: fixed;
   background: rgb(255, 255, 255);
@@ -107,6 +202,11 @@
   color: #000;
 }
 
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
 .home {
   display: flex;
   flex-direction: column;
@@ -144,6 +244,24 @@
   border-radius: 50%;
 }
 
+@media (max-width: 1024px) {
+  .home {
+    padding: 3rem 1.4rem;
+  }
+  .home .contentphototext {
+    flex-direction: row;
+  }
+  .home .contentphototext .namework {
+    text-align: left;
+    flex-direction: column;
+  }
+  .home .contentphototext .namework h1 {
+    font-size: 5rem;
+  }
+  .home .contentphototext .photographer {
+    display: none;
+  }
+}
 .container {
   width: 100%;
   min-height: 200px;
@@ -189,6 +307,13 @@
   animation: animationPhotoRight 1s;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    min-height: 200px;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
 .sobre {
   display: flex;
   justify-content: center;
