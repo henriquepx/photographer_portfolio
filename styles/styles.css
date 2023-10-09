@@ -23,7 +23,7 @@
 
 @media (max-width: 1024px) {
   .jstabcontent.ativo {
-    margin-left: 0px;
+    margin-left: 70px;
   }
 }
 @keyframes animationSection {
@@ -94,86 +94,6 @@
     opacity: 1;
   }
 }
-header {
-  display: none;
-}
-header .danielheader {
-  width: 50px;
-  border-radius: 100%;
-}
-header .menucontactheader {
-  display: flex;
-  align-items: center;
-}
-header .menucontactheader .hamburger {
-  display: none;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  header .menucontactheader .hamburger {
-    display: block;
-  }
-}
-header .menucontactheader .hamburger .bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3 ease-in-out;
-  background-color: black;
-}
-
-@media (max-width: 1024px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 1rem;
-  }
-  header .hamburger.active {
-    position: absolute;
-    transition: 0.4s;
-    right: 16px;
-    z-index: 888;
-  }
-  header .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-    background-color: #ffffff;
-    transition: 0.4s ease-in-out;
-  }
-  header .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-    background-color: #ffffff;
-    transition: 0.4s ease-in-out;
-  }
-  header .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-    background-color: #ffffff;
-    transition: 0.4s ease-in-out;
-  }
-}
-.menu {
-  display: none;
-}
-
-@media (max-width: 1024px) {
-  .menu.active {
-    display: block;
-    position: absolute;
-    z-index: 300;
-    background-color: black;
-    height: 100vh;
-    width: 100%;
-    animation: animationHamburger 0.6s forwards;
-    bottom: 0;
-    position: absolute;
-    padding: 2rem 3rem;
-  }
-  .menu.active .navmenu ul li a {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    color: #fff;
-  }
-}
 .sidebar {
   position: fixed;
   background: rgb(255, 255, 255);
@@ -204,7 +124,9 @@ header .menucontactheader .hamburger .bar {
 
 @media (max-width: 1024px) {
   .sidebar {
-    display: none;
+    position: fixed;
+    width: 60px;
+    height: 100%;
   }
 }
 .home {
@@ -439,4 +361,38 @@ header .menucontactheader .hamburger .bar {
   opacity: 1;
   right: 5px;
   bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+  .sobre {
+    flex-direction: column-reverse;
+    padding: 0rem;
+  }
+  .sobre img {
+    max-width: 300px;
+    width: 100%;
+  }
+  .sobre .textsobre h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+  }
+  .sobre .textsobre p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    max-width: 70ch;
+  }
+  .sobre .textsobre .desc2 {
+    margin: 1rem 0rem 6rem 0rem;
+  }
+  .sobre .textsobre .rowdesc {
+    flex-direction: column;
+  }
+  .sobre .textsobre .rowdesc p span {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

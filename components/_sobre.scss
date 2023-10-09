@@ -138,3 +138,40 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .sobre {
+        flex-direction: column-reverse;
+        padding: 0rem;
+        img {
+            max-width: 300px;
+            width: 100%;
+        }
+        .textsobre {
+            h1 {
+                font-family: $font;
+                font-size: 2rem;
+                font-weight: 600;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 6rem;
+              }
+              p {
+                font-family: $font;
+                font-size: 1.1rem;
+                font-weight: 600;
+                max-width: 70ch;
+              }
+              .desc2 {
+                margin: 1rem 0rem 6rem 0rem;
+              }
+              .rowdesc {
+flex-direction: column;
+                p {
+                    span {
+                        font-size: 2rem;
+                    }
+                }
+              }
+        }
+    }
+}

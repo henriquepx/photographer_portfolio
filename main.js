@@ -14,20 +14,3 @@ tabMenu.forEach((itemMenu, index) => {
   })
 })
 
-
-
-// Menu Hamburger Responsible
-const hamburger = document.querySelector(".hamburger");
-const MenuHamburguer = document.querySelector(".menu");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  MenuHamburguer.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-link").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    MenuHamburguer.classList.remove("active");
-  })
-); 
