@@ -20,7 +20,7 @@
     </div>
     <div>
         <section class="jstabcontent ativo">
-          <div class="home" id="home">
+          <div class="home">
             <div class="contentphototext">
               <img class="photographer" src="./img/daniel.jpg" alt="">
               <div class="namework">
@@ -50,11 +50,10 @@
             </div>
           </div>
           </div>
-          
         </section>
 
         <section class="jstabcontent">
-          <div class="sobre" id="sobre">
+          <div class="sobre">
             <img src="/img/danielfull.jpg" alt="">
             <div class="textsobre">
               <h1 class="namedaniel">Daniel<span>Righetti</span></h1>
@@ -70,16 +69,33 @@
             </div>
           </div>
           </div>
-          
-          
         </section>
 
         <section class="jstabcontent portfolio">
           <h1>Portfólio</h1>
         </section>
 
-        <section class="jstabcontent contato">
-          <h1>Contato</h1>
+        <section class="jstabcontent">
+          <div class="contato">
+            <h2 class="messageemail">Envie a mensagem diretamente no e-mail.</h2>
+            <p class="messageemailp">Preencha os dados corretamente e aguarde uma resposta.</p>
+            <form action="#">
+            <div class="nameemail">
+              <div class="nameform">
+                <label for="user_name">Nome</label>
+                <input type="text" name="from_name" id="user_name">
+              </div>
+              <div class="emailform">
+                <label for="user_email">E-mail</label>
+                <input type="text" name="reply_to" id="user_email">
+              </div>
+            </div>
+            <label for="message">Mensagem</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <button>Enviar</button>
+          </form>
+          </div>
+          </section>
         </div>
       </div>
 
