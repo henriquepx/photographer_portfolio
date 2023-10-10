@@ -5,6 +5,7 @@
       flex-direction: column;
       gap: 40px;
       padding: 2rem;
+      overflow: hidden;
       .contentphototext {
         display: flex;
         justify-content: space-between;
@@ -19,6 +20,12 @@
                     display: flex;
                     flex-direction: column;
                     animation: animationName 1.3s forwards;
+                    @media (max-width: 450px) {
+                      font-size: 2.9rem;
+                    }
+                    @media (max-width: 630px) {
+                      font-size: 4rem;
+                    }
                     span {
                       animation: animationName 2s forwards;
                     }
@@ -45,9 +52,6 @@
       .namework {
         text-align: left;
         flex-direction: column;
-          h1 {
-            font-size: 5rem;
-          }
             }
             .photographer {
               display: none;
