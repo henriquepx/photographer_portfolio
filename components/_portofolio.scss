@@ -1,6 +1,13 @@
 @import '../abstract/variables';
 
 .portfolio {
+    .titleportfolio {
+        text-align: center;
+        font-family: $font;
+        font-size: 3rem;
+        margin: 2rem 0rem;
+        font-weight: 600;
+    }
     .portfoliosize {
         max-width: 1800px;
         width: 100%;

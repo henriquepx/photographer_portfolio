@@ -405,6 +405,13 @@
     font-size: 2rem;
   }
 }
+.portfolio .titleportfolio {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  margin: 2rem 0rem;
+  font-weight: 600;
+}
 .portfolio .portfoliosize {
   max-width: 1800px;
   width: 100%;
