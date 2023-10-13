@@ -47,6 +47,18 @@ html, body {
 .home .texthome {
   position: relative;
 }
+.home .texthome h1 {
+  font-size: 9rem;
+  font-weight: 550;
+  color: rgb(0, 0, 0);
+}
+.home .texthome h2 {
+  position: absolute;
+  font-size: 9rem;
+  font-weight: 550;
+  color: rgb(0, 0, 0);
+  left: 10%;
+}
 .home .texthome .typing {
   display: flex;
   height: auto;
@@ -60,18 +72,6 @@ html, body {
   position: relative;
   right: 0;
   animation: blink 1s step-end infinite;
-}
-.home .texthome h1 {
-  font-size: 9rem;
-  font-weight: 550;
-  color: rgb(0, 0, 0);
-}
-.home .texthome h2 {
-  position: absolute;
-  font-size: 9rem;
-  font-weight: 550;
-  color: rgb(0, 0, 0);
-  left: 10%;
 }
 .home .texthome .deschome {
   max-width: 60ch;
@@ -101,16 +101,64 @@ html, body {
     color: black;
   }
 }
+@media (max-width: 450px) {
+  .home {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .home .texthome {
+    position: relative;
+  }
+  .home .texthome h1 {
+    font-size: 4rem;
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+    margin-left: 2rem;
+  }
+  .home .texthome h2 {
+    position: absolute;
+    font-size: 4rem;
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+    left: 10%;
+  }
+  .home .texthome .typing {
+    font-size: 1rem;
+    margin: 8rem 0rem 1rem 1rem;
+  }
+  .home .texthome .deschome {
+    text-align: justify;
+    padding: 0rem 1rem 3rem 1rem;
+  }
+  .home .texthome .mediassocials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .home .texthome .mediassocials a {
+    color: #000;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .home .daniel {
+    display: none;
+  }
+}
 .contato {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 15rem;
+  padding: 0rem 1rem;
 }
 @media (max-width: 768px) {
   .contato {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 }
 .contato .messageemail {
@@ -164,7 +212,7 @@ html, body {
   width: 100%;
   padding: 15px 8px;
   font-family: "Montserrat", sans-serif;
-  background-color: white;
+  background-color: transparent;
   border: 2px solid rgb(0, 0, 0);
 }
 .contato form textarea {
@@ -173,7 +221,7 @@ html, body {
   font-family: "Montserrat", sans-serif;
   border: 0;
   padding: 8px;
-  background-color: white;
+  background-color: transparent;
   border: 2px solid rgb(0, 0, 0);
   height: 200px;
   width: 100%;
@@ -181,7 +229,7 @@ html, body {
   resize: none;
 }
 .contato form button {
-  height: 34px;
+  height: 50px;
   border-radius: 4px;
   border: 0;
   cursor: pointer;

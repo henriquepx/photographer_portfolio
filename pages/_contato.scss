@@ -6,8 +6,9 @@
     justify-content: center;
     align-items: center;
     margin-top: 15rem;
+    padding: 0rem 1rem;
     @media (max-width: 768px) {
-        margin-top: 8rem;
+        margin-top: 4rem;
     }
         .messageemail {
             text-align: center;
@@ -55,7 +56,7 @@
                 width: 100%; 
                 padding: 15px 8px;
                 font-family: $font;
-                background-color: white;
+                background-color: transparent;
                 border: 2px solid rgb(0, 0, 0);
             }
             textarea {
@@ -64,7 +65,7 @@
                 font-family: $font;
                 border: 0;
                 padding: 8px;
-                background-color: white;
+                background-color: transparent;
                 border: 2px solid rgb(0, 0, 0);
                 height: 200px;
                 width: 100%;
@@ -72,7 +73,7 @@
                 resize: none;
             }
             button {
-                height: 34px;
+                height: 50px;
                 border-radius: 4px;
                 border: 0;
                 cursor: pointer;
