@@ -22,12 +22,13 @@ html, body {
 
 .jstabcontent.ativo {
   display: block;
-  animation: animationSection 1s forwards;
+  animation: animationSection 1.4s forwards;
+  overflow: hidden;
 }
 
 @keyframes animationSection {
   from {
-    transform: translate3d(-80px, 0, 0);
+    transform: translate3d(0, 100%, 0);
     opacity: 0;
   }
   to {
@@ -41,26 +42,39 @@ html, body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  margin-top: 4rem;
 }
 .home .texthome {
   position: relative;
 }
-.home .texthome h1 {
-  font-size: 12rem;
+.home .texthome .typing {
+  display: flex;
+  height: auto;
+  color: rgb(0, 0, 0);
   font-weight: 700;
+  font-size: 1rem;
+  margin: 15rem 0rem 3rem 0rem;
+}
+.home .texthome #typing::after {
+  content: "|";
+  position: relative;
+  right: 0;
+  animation: blink 1s step-end infinite;
+}
+.home .texthome h1 {
+  font-size: 9rem;
+  font-weight: 550;
   color: rgb(0, 0, 0);
 }
 .home .texthome h2 {
   position: absolute;
   font-size: 9rem;
-  font-weight: 600;
+  font-weight: 550;
   color: rgb(0, 0, 0);
-  right: 30%;
+  left: 10%;
 }
 .home .texthome .deschome {
-  position: absolute;
-  bottom: 20%;
-  right: 0;
+  max-width: 60ch;
 }
 .home .texthome .mediassocials {
   display: flex;
@@ -76,9 +90,17 @@ html, body {
   font-style: italic;
 }
 .home .daniel {
-  width: 43%;
+  width: 40%;
 }
 
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
 .contato {
   display: flex;
   flex-direction: column;

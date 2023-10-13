@@ -7,24 +7,37 @@
 
     display: flex;
     justify-content: space-between;
+    margin-top: 4rem;
     .texthome {
         position: relative;
+        .typing {
+          display: flex;
+          height: auto;
+          color: rgb(0, 0, 0);
+          font-weight: 700;
+          font-size: 1rem;
+          margin: 15rem 0rem 3rem 0rem;
+        }
+        #typing::after {
+          content: '|';
+          position: relative;
+          right: 0;
+          animation: blink 1s step-end infinite;
+        }
         h1 {
-            font-size: 12rem;
-            font-weight: 700;
+            font-size: 9rem;
+            font-weight: 550;
             color: rgb(0, 0, 0);
           }
           h2 {
             position: absolute;
             font-size: 9rem;
-            font-weight: 600;
+            font-weight: 550;
             color: rgb(0, 0, 0);
-            right: 30%;
+            left: 10%;
           }
           .deschome {
-            position: absolute;
-            bottom: 20%;
-            right: 0;
+            max-width: 60ch;
           }
           .mediassocials {
             display: flex;
@@ -42,6 +55,16 @@
           }
     }
     .daniel {
-        width: 43%;
+        width: 40%;
+    }
+}
+
+
+@keyframes blink {
+    from, to {
+        color: transparent
+    }
+    50% {
+        color: black;
     }
 }
