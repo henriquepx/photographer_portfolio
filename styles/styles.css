@@ -35,6 +35,50 @@ html, body {
     opacity: 1;
   }
 }
+.home {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.home .texthome {
+  position: relative;
+}
+.home .texthome h1 {
+  font-size: 12rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+.home .texthome h2 {
+  position: absolute;
+  font-size: 9rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  right: 30%;
+}
+.home .texthome .deschome {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+}
+.home .texthome .mediassocials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.home .texthome .mediassocials a {
+  color: #000;
+  font-weight: 500;
+  font-style: italic;
+}
+.home .daniel {
+  width: 43%;
+}
+
 .contato {
   display: flex;
   flex-direction: column;
@@ -202,7 +246,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 1rem;
+  padding: 1.7rem 1rem;
 }
 header .logo {
   background-color: black;
