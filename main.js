@@ -24,16 +24,13 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-document.querySelectorAll(".nav-link").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
-); 
+/* closing menu: */
+
+
 
 // TEXT WRITING
 
-const greeting = ['Photographer', 'Filmmaker'];
+const greeting = ['Fotógrafo', 'Filmmaker'];
 let currentGreetingIndex = 0;
 let currentCharacterIndex = 0;
 let isDeleting = false;

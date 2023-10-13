@@ -148,6 +148,42 @@ html, body {
     display: none;
   }
 }
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 70%;
+}
+@media (max-width: 1024px) {
+  .portfolio .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .portfolio .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+}
+.portfolio .gallery > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease;
+}
+.portfolio .gallery:has(img:hover) img:not(:hover) {
+  scale: 0.9;
+  opacity: 0.65;
+}
+
 .contato {
   display: flex;
   flex-direction: column;
