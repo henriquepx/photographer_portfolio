@@ -1,3 +1,9 @@
+// RELOAD
+
+document.getElementById("logo").addEventListener("click", function() {
+  location.reload();
+});
+
 // TAB NAVEGATION
 const tabMenu = document.querySelectorAll('.jstabmenu');
 const tabContent = document.querySelectorAll('.jstabcontent');

@@ -18,6 +18,7 @@ html, body {
 
 .jstabcontent {
   display: none;
+  padding-bottom: 13rem;
 }
 
 .jstabcontent.ativo {
@@ -189,7 +190,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 15rem;
   padding: 0rem 1rem;
 }
 @media (max-width: 768px) {
@@ -359,6 +359,7 @@ header .logo {
   color: white;
   font-size: 2rem;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 header nav {
   display: flex;
