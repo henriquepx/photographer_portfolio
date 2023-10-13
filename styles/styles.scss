@@ -1,9 +1,9 @@
 @import '../abstract/reset';
 @import '../abstract/variables';
 
-@import '../components/sidebar';
-@import '../components/home';
-@import '../components/gallerymain';
-@import '../components/sobre';
-@import '../components/portofolio';
-@import '../components/contato';
+@import '../pages/home';
+@import '../pages/sobre';
+@import '../pages/portofolio';
+@import '../pages/contato';
+
+@import '../components/menuhamburger';
