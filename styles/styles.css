@@ -159,6 +159,9 @@ header a {
   cursor: pointer;
   font-weight: 600;
 }
+header a span {
+  margin-left: 15px;
+}
 
 .headercontainer.active {
   position: relative;
