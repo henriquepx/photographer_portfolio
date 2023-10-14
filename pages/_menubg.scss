@@ -1,0 +1,39 @@
+@import '../abstract/variables';
+
+.menubg {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+
+    position: absolute;
+    top: 0;
+}
+
+.menubg.active {
+    display: block;
+    animation: ShowingBg .7s ease-in-out;
+}
+
+.menubg.closed {
+    display: block;
+    animation: ClosingBg 1.2s forwards;
+}
+
+@keyframes ShowingBg {
+    from {
+        transform: translate3d(0, -150%, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes ClosingBg {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -150%, 0);
+    }
+}

@@ -1,77 +1,17 @@
-// RELOAD
+const MenuButton = document.querySelector('.menu');
+const MenuBackground = document.querySelector('.menubg');
+const Header = document.querySelector('.headercontainer');
 
-document.getElementById("logo").addEventListener("click", function() {
-  location.reload();
-});
+MenuButton.addEventListener('click', () => {
+    MenuButton.classList.toggle('active');
 
-// TAB NAVEGATION
-const tabMenu = document.querySelectorAll('.jstabmenu');
-const tabContent = document.querySelectorAll('.jstabcontent');
-
-function activeTab(index) {
-  tabContent.forEach((section) => {
-    section.classList.remove('ativo');
-  });
-  tabContent[index].classList.add('ativo');
-}
-
-tabMenu.forEach((itemMenu, index) => {
-  itemMenu.addEventListener('click', () => {
-    activeTab(index);
-  })
-})
-
-// MENU HAMBURGER 
-const hamburger = document.querySelector(".menuhamburger");
-const navMenu = document.querySelector(".menu");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-/* closing menu: */
-
-
-
-// TEXT WRITING
-
-const greeting = ['Fotógrafo', 'Filmmaker'];
-let currentGreetingIndex = 0;
-let currentCharacterIndex = 0;
-let isDeleting = false;
-let isPaused = false;
-let pauseEnd = 0;
-
-function typeWriterEffect() {
-  const greetingElement = document.getElementById('typing');
-
-  if (isPaused && Date.now() > pauseEnd) {
-    isPaused = false;
-    if (isDeleting) {
-      currentGreetingIndex = (currentGreetingIndex + 1) % greeting.length;
-      isDeleting = false;
+    if (MenuButton.classList.contains('active')) {
+        MenuBackground.classList.add('active');
+        MenuBackground.classList.remove('closed');
+        Header.classList.add('active');
     } else {
-      isDeleting = true;
+        MenuBackground.classList.remove('active');
+        MenuBackground.classList.add('closed');
+        Header.classList.remove('active');
     }
-  }
-
-  if (!isPaused && !isDeleting && currentCharacterIndex === greeting[currentGreetingIndex].length) {
-    isPaused = true;
-    pauseEnd = Date.now() + 800; 
-    return setTimeout(typeWriterEffect, 40);
-  }
-
-  if (!isPaused && isDeleting && currentCharacterIndex === 0) {
-    isPaused = true;
-    pauseEnd = Date.now() + 200; 
-    return setTimeout(typeWriterEffect, 40);
-  }
-
-  const timeout = isDeleting ? 100 : 200;
-  greetingElement.innerText = greeting[currentGreetingIndex].substring(0, currentCharacterIndex);
-  currentCharacterIndex = isDeleting ? currentCharacterIndex - 1 : currentCharacterIndex + 1;
-  setTimeout(typeWriterEffect, timeout);
-}
-
-typeWriterEffect();
+});
