@@ -39,20 +39,53 @@ html, body {
 }
 .menubg {
   display: none;
+  gap: 200px;
   height: 100vh;
   width: 100vw;
   background-color: black;
   position: absolute;
   top: 0;
+  color: #fff;
+  padding: 15rem 9rem 0rem 9rem;
+}
+.menubg .contact .namecelemail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menubg .contact .namecelemail h1 {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+.menubg .contact .namecelemail a {
+  color: #fff;
+}
+.menubg .contact .socialmedia {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15rem;
+}
+.menubg .contact .socialmedia a {
+  color: #fff;
+}
+.menubg .info h2 {
+  font-size: 10rem;
+}
+.menubg .info p {
+  margin-left: 15rem;
+}
+.menubg .info p:last-child {
+  margin-top: 2rem;
 }
 
 .menubg.active {
-  display: block;
+  display: flex;
   animation: ShowingBg 0.7s ease-in-out;
 }
 
 .menubg.closed {
-  display: block;
+  display: flex;
   animation: ClosingBg 1.2s forwards;
 }
 
