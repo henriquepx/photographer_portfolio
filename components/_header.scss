@@ -5,6 +5,10 @@ header {
     width: 100%;
     margin: 0 auto;
 
+    position: fixed;
+    top: 0;
+    left: 9.9%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,9 +30,6 @@ header {
 }
 
 .headercontainer.active {
-    position: fixed;
-    top: 0;
-    left: 9.9%;
     z-index: 777;
     h1 {
         color: white;

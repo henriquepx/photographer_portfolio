@@ -38,16 +38,14 @@ html, body {
   }
 }
 .home {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 100px;
 }
 .home .photo {
-  width: 50%;
+  width: 30%;
 }
 
 .menubg {
@@ -332,6 +330,9 @@ header {
   max-width: 1700px;
   width: 100%;
   margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 9.9%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -352,9 +353,6 @@ header a span {
 }
 
 .headercontainer.active {
-  position: fixed;
-  top: 0;
-  left: 9.9%;
   z-index: 777;
 }
 .headercontainer.active h1 {
