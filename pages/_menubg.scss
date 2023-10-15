@@ -165,11 +165,23 @@
             }
         }
     }
+    .danielimg {
+        height: 30%;
+        border-radius: 50%;
+        animation: AnimationText 2s forwards;
+    }
 }
 
 .menubg.active {
     display: flex;
     animation: ShowingBg .7s ease-in-out;
+    position: fixed;
+    .contact {
+        animation: AnimationText 2s forwards;
+    }
+    .info {
+        animation: AnimationText 2s forwards;
+    }
 }
 
 .menubg.closed {
@@ -192,5 +204,14 @@
     }
     to {
         transform: translate3d(0, -150%, 0);
+    }
+}
+
+@keyframes AnimationText {
+    from {
+        transform: translate3d(0, -150%, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
     }
 }

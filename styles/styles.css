@@ -213,10 +213,22 @@ html, body {
 .menubg .info p:last-child {
   margin-top: 2rem;
 }
+.menubg .danielimg {
+  height: 30%;
+  border-radius: 50%;
+  animation: AnimationText 2s forwards;
+}
 
 .menubg.active {
   display: flex;
   animation: ShowingBg 0.7s ease-in-out;
+  position: fixed;
+}
+.menubg.active .contact {
+  animation: AnimationText 2s forwards;
+}
+.menubg.active .info {
+  animation: AnimationText 2s forwards;
 }
 
 .menubg.closed {
@@ -238,6 +250,14 @@ html, body {
   }
   to {
     transform: translate3d(0, -150%, 0);
+  }
+}
+@keyframes AnimationText {
+  from {
+    transform: translate3d(0, -150%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 .menuhamburger {
@@ -332,7 +352,9 @@ header a span {
 }
 
 .headercontainer.active {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 9.9%;
   z-index: 777;
 }
 .headercontainer.active h1 {
