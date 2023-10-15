@@ -29,14 +29,129 @@
             flex-direction: column;
             gap: 10px;
             margin-top: 15rem;
-            a {
-                color: #fff;
+            .underline {
+                --line: #cfcfcf;
+                --color: #ffffff;
+                text-decoration: none;
+                color: var(--color);
+                position: relative;
+                span {
+                    background-image: linear-gradient(0deg, var(--line) 0%, var(--line) 100%);
+                    background-position: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-size: var(--background-size, 100%) 1px;
+                    transition: background-size .2s linear var(--background-delay, .15s);
+                    font-size: 16px;
+                    line-height: 20px;
+                    transform: translateZ(0);
+                }
+                svg {
+                    vertical-align: top;
+                    display: inline;
+                    line-height: 1;
+                    width: 13px;
+                    height: 20px;
+                    position: relative;
+                    left: -2px;
+                    fill: none;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 1px;
+                    stroke: var(--line);
+                    stroke-dasharray: 7.95 30;
+                    stroke-dashoffset: var(--stroke-dashoffset, 46);
+                    transition: stroke-dashoffset var(--stroke-duration, .15s) var(--stroke-easing, linear) var(--stroke-delay, 0s);
+                }
+                &:hover {
+                    --background-size: 0%;
+                    --background-delay: 0s;
+                    --stroke-dashoffset: 26;
+                    --stroke-duration: .3s;
+                    --stroke-easing: cubic-bezier(.3, 1.5, .5, 1);
+                    --stroke-delay: .195s;
+                }
             }
         }
     }
     .info {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 7rem;
+            color: #6b6b6b;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+            }
+            &::after {
+                content: attr(data-replace);
+                height: 100%;
+                top: 0;
+                transform-origin: 50% 100%;
+                transform: translate3d(0, 200%, 0);
+                transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+                color: #f7f7f7;
+            }
+            &:hover::before {
+                transform-origin: 50% 50%;
+                transform: scaleY(0);
+            }
+            &:hover::after {
+                transform: translate3d(0, 0, 0);
+            }
+            span {
+                display: inline-block;
+                transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+                color: gray;
+            }
+            &:hover span {
+                transform: translate3d(0, 100%, 0);
+            }
+        }
         h2 {
-            font-size: 10rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 7rem;
+            color: #6b6b6b;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            margin: 3rem 0rem;
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+            }
+            &::after {
+                content: attr(data-replace);
+                height: 100%;
+                top: 0;
+                transform-origin: 50% 100%;
+                transform: translate3d(0, 200%, 0);
+                transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+                color: #f7f7f7;
+            }
+            &:hover::before {
+                transform-origin: 50% 50%;
+                transform: scaleY(0);
+            }
+            &:hover::after {
+                transform: translate3d(0, 0, 0);
+            }
+            span {
+                display: inline-block;
+                transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+                color: gray;
+            }
+            &:hover span {
+                transform: translate3d(0, 100%, 0);
+            }
         }
         p {
             margin-left: 15rem;
