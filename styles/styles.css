@@ -37,6 +37,19 @@ html, body {
     opacity: 1;
   }
 }
+.home {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.home .photo {
+  width: 50%;
+}
+
 .menubg {
   display: none;
   gap: 200px;
