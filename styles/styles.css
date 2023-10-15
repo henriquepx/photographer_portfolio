@@ -16,6 +16,16 @@ html, body {
   background-color: rgb(240, 240, 240);
 }
 
+.cursor {
+  width: 30px;
+  height: 30px;
+  background: #4d4d4d;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 .jstabcontent {
   display: none;
   padding-bottom: 13rem;
@@ -135,6 +145,7 @@ html, body {
   overflow: hidden;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .menubg .info h3::before, .menubg .info h3::after {
   content: "";
@@ -174,6 +185,7 @@ html, body {
   position: relative;
   display: inline-block;
   margin: 3rem 0rem;
+  cursor: pointer;
 }
 .menubg .info h2::before, .menubg .info h2::after {
   content: "";

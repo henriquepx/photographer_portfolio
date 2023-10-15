@@ -1,40 +1,49 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-size: 100%;
-    font: inherit;
-    scroll-behavior: smooth;
-    vertical-align: baseline;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  scroll-behavior: smooth;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
 
-  html, body {
-    background-color: rgb(240, 240, 240);
-  }
+html, body {
+background-color: rgb(240, 240, 240);
+}
 
-  .jstabcontent {
-    display: none;
-    padding-bottom: 13rem;
-  }
+.cursor {
+  width: 30px;
+  height: 30px;
+  background: #4d4d4d;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.jstabcontent {
+  display: none;
+  padding-bottom: 13rem;
+}
   
-  .jstabcontent.ativo {
-    display: block;
-    animation: animationSection 1.4s forwards;
-    overflow: hidden;
-  }
+.jstabcontent.ativo {
+  display: block;
+  animation: animationSection 1.4s forwards;
+  overflow: hidden;
+}
   
-  
-  @keyframes animationSection {
-    from {
-      transform: translate3d(0, 100%, 0);
-      opacity: 0;
-    }
-    to {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
+@keyframes animationSection {
+  from {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
   }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
