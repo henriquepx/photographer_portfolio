@@ -60,6 +60,11 @@ html, body {
 .menubg .contact .namecelemail a {
   color: #fff;
 }
+.menubg .contact .namecelemail .iconlink {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 .menubg .contact .socialmedia {
   display: flex;
   flex-direction: column;
