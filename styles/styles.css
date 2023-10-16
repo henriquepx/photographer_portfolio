@@ -26,27 +26,6 @@ html, body {
   pointer-events: none;
 }
 
-.jstabcontent {
-  display: none;
-  padding-bottom: 13rem;
-}
-
-.jstabcontent.ativo {
-  display: block;
-  animation: animationSection 1.4s forwards;
-  overflow: hidden;
-}
-
-@keyframes animationSection {
-  from {
-    transform: translate3d(0, 100%, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
 .home {
   display: flex;
   flex-direction: column;
@@ -64,6 +43,8 @@ html, body {
   height: 100vh;
   width: 100vw;
   background-color: black;
+  max-height: 100vh;
+  overflow-y: auto;
   position: absolute;
   top: 0;
   color: #fff;

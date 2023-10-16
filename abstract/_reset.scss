@@ -25,25 +25,3 @@ background-color: rgb(240, 240, 240);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
-
-.jstabcontent {
-  display: none;
-  padding-bottom: 13rem;
-}
-  
-.jstabcontent.ativo {
-  display: block;
-  animation: animationSection 1.4s forwards;
-  overflow: hidden;
-}
-  
-@keyframes animationSection {
-  from {
-    transform: translate3d(0, 100%, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
