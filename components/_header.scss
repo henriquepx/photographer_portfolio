@@ -1,19 +1,17 @@
 @import '../abstract/variables';
 
 header {
-    max-width: 1700px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
-
-    position: fixed;
-    top: 0;
-    left: 9.9%;
+    z-index: 999;
+    position: relative;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 3rem 1rem;
+    padding: 3rem 2rem;
     .logo {
         font-size: 1rem;
         cursor: pointer;
@@ -31,6 +29,7 @@ header {
 
 .headercontainer.active {
     z-index: 777;
+    top: 0;
     h1 {
         color: white;
         transition: .3s;
@@ -39,4 +38,11 @@ header {
         color: white;
         transition: .3s;
     }
+}
+
+@media (max-width: 1900px) {
+   .headercontainer.active {
+    left: 0%;
+    padding: 3rem 1.5rem;
+   }
 }
