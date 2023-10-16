@@ -18,10 +18,3 @@ MenuButton.addEventListener('click', () => {
         MoreLess.textContent = '+';
     }
 });
-
-
-const cursor1 = document.querySelector(".cursor-1");
-
-document.addEventListener("mousemove", (e) => {
-    cursor1.style.transform = `translate(${e.clientX - cursor1.clientWidth / 2}px, ${e.clientY - cursor1.clientHeight / 2}px)`;
-});

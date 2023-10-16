@@ -1,9 +1,6 @@
 @import '../abstract/variables';
 
 header {
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
     z-index: 999;
     position: relative;
 
@@ -12,26 +9,38 @@ header {
     align-items: center;
 
     padding: 3rem 2rem;
-    .logo {
-        font-size: 1rem;
-        cursor: pointer;
-        font-weight: 600;
-    }
-    .menu {
-        font-size: 1rem;
-        cursor: pointer;
-        font-weight: 600;
-        color: #000;
-        &:active {
+    .headersize {
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .menu {
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 600;
             color: #000;
-        }
-        span {
-            margin-left: 15px;
-        }
+            &:active {
+                color: #000;
+            }
+            span {
+                margin-left: 15px;
+            }
+        } 
     }
+    
 }
 
 .headercontainer.active {
+    animation: ShowingBg .7s ease-in-out; 
+    background-color: #000;
     z-index: 777;
     h1 {
         color: white;
@@ -45,7 +54,6 @@ header {
 
 @media (max-width: 1900px) {
    .headercontainer.active {
-    left: 0%;
     padding: 3rem 1.5rem;
    }
 }

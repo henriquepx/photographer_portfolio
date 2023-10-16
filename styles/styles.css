@@ -33,7 +33,6 @@ html, body {
   height: 100vh;
   width: 100vw;
   background-color: black;
-  max-height: 100vh;
   overflow-y: auto;
   position: absolute;
   top: 0;
@@ -205,7 +204,8 @@ html, body {
   .menubg.active {
     padding: 10rem 1rem;
     gap: 50px;
-    position: fixed;
+    position: absolute;
+    flex-wrap: wrap;
   }
   .menubg.active .contact .socialmedia {
     margin-top: 3rem;
@@ -294,9 +294,6 @@ html, body {
   }
 }
 header {
-  max-width: 1300px;
-  width: 100%;
-  margin: 0 auto;
   z-index: 999;
   position: relative;
   display: flex;
@@ -304,25 +301,35 @@ header {
   align-items: center;
   padding: 3rem 2rem;
 }
-header .logo {
+header .headersize {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headersize .logo {
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
 }
-header .menu {
+header .headersize .menu {
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
   color: #000;
 }
-header .menu:active {
+header .headersize .menu:active {
   color: #000;
 }
-header .menu span {
+header .headersize .menu span {
   margin-left: 15px;
 }
 
 .headercontainer.active {
+  animation: ShowingBg 0.7s ease-in-out;
+  background-color: #000;
   z-index: 777;
 }
 .headercontainer.active h1 {
@@ -336,7 +343,6 @@ header .menu span {
 
 @media (max-width: 1900px) {
   .headercontainer.active {
-    left: 0%;
     padding: 3rem 1.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
