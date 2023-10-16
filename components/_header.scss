@@ -17,10 +17,14 @@ header {
         cursor: pointer;
         font-weight: 600;
     }
-    a {
+    .menu {
         font-size: 1rem;
         cursor: pointer;
         font-weight: 600;
+        color: #000;
+        &:active {
+            color: #000;
+        }
         span {
             margin-left: 15px;
         }
@@ -29,7 +33,6 @@ header {
 
 .headercontainer.active {
     z-index: 777;
-    top: 0;
     h1 {
         color: white;
         transition: .3s;
