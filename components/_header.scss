@@ -9,7 +9,10 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 3rem;
+    @media (max-width: 1900px) {
+         padding: 2rem 1.5rem;
+     }
     .headersize {
         max-width: 1600px;
         width: 100%;
@@ -61,8 +64,3 @@ header {
     }
 }
 
-@media (max-width: 1900px) {
-   .headercontainer.active {
-    padding: 2rem 1.5rem;
-   }
-}

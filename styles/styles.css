@@ -26,8 +26,7 @@ html, body {
   scroll-padding: 30px;
   position: relative;
   flex: 1;
-  background: #e2e8f0;
-  height: 100vh;
+  height: 87vh;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -358,7 +357,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 3rem;
+}
+@media (max-width: 1900px) {
+  header {
+    padding: 2rem 1.5rem;
+  }
 }
 header .headersize {
   max-width: 1600px;
@@ -410,11 +414,6 @@ header .headersize .socialmediaheader {
   transition: 0.3s;
 }
 
-@media (max-width: 1900px) {
-  .headercontainer.active {
-    padding: 2rem 1.5rem;
-  }
-}
 .container {
   width: 100%;
   display: flex;
