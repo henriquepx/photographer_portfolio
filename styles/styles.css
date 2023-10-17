@@ -13,20 +13,30 @@
 }
 
 html, body {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(216, 216, 216);
 }
 
 .home {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
+  gap: 25px;
+  overflow-y: auto;
+  margin-top: 4rem;
 }
-.home .photo {
-  width: 30%;
+.home .photocontainer {
+  position: relative;
+  z-index: 5;
+}
+.home .photocontainer .photo {
+  width: 800px;
+  z-index: 5;
+  transition: transform 0.5s ease;
 }
 
+@media (max-with: 450px) {
+  .photo {
+    width: 320px;
+  }
+}
 .menubg {
   display: none;
   gap: 200px;
@@ -163,6 +173,7 @@ html, body {
   display: flex;
   animation: ShowingBg 0.7s ease-in-out;
   position: fixed;
+  z-index: 700;
 }
 .menubg.active .contact {
   animation: AnimationText 2s forwards;
@@ -174,6 +185,7 @@ html, body {
 .menubg.closed {
   display: flex;
   animation: ClosingBg 1.2s forwards;
+  z-index: 700;
 }
 
 @keyframes ShowingBg {
@@ -294,15 +306,16 @@ html, body {
   }
 }
 header {
-  z-index: 999;
   position: relative;
+  top: 0;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 2rem;
 }
 header .headersize {
-  max-width: 1300px;
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -326,6 +339,16 @@ header .headersize .menu:active {
 header .headersize .menu span {
   margin-left: 15px;
 }
+header .headersize .socialmediaheader {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  header .headersize .socialmediaheader {
+    display: none;
+  }
+}
 
 .headercontainer.active {
   animation: ShowingBg 0.7s ease-in-out;
@@ -343,6 +366,6 @@ header .headersize .menu span {
 
 @media (max-width: 1900px) {
   .headercontainer.active {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */

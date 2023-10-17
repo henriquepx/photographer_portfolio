@@ -1,16 +1,17 @@
 @import '../abstract/variables';
 
 header {
-    z-index: 999;
     position: relative;
+    top: 0;
+    z-index: 999;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 3rem 2rem;
+    padding: 2rem;
     .headersize {
-        max-width: 1300px;
+        max-width: 1600px;
         width: 100%;
         margin: 0 auto;
 
@@ -34,6 +35,14 @@ header {
                 margin-left: 15px;
             }
         } 
+        .socialmediaheader {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            @media (max-width: 500px){
+                display: none;
+            }
+        }
     }
     
 }
@@ -54,6 +63,6 @@ header {
 
 @media (max-width: 1900px) {
    .headercontainer.active {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
    }
 }

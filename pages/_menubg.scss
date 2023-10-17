@@ -139,6 +139,7 @@
     display: flex;
     animation: ShowingBg .7s ease-in-out;   
     position: fixed;
+    z-index: 700;
     .contact {
         animation: AnimationText 2s forwards;
     }
@@ -150,6 +151,7 @@
 .menubg.closed {
     display: flex;
     animation: ClosingBg 1.2s forwards;
+    z-index: 700;
 }
 
 @keyframes ShowingBg {
