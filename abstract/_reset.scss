@@ -17,9 +17,32 @@ background-color: rgb(255, 255, 255);
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.2rem 0rem;
-  font-size: .5rem;
+  margin-top: 3rem;
+  .footercontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    font-size: .5rem;
+  }
+  a {
+    color: #000;
+    &:visited {
+      color: #000;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  footer {
+    .footercontainer {
+      flex-direction: column;
+    }
+  }
 }

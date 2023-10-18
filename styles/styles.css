@@ -17,13 +17,32 @@ html, body {
 }
 
 footer {
+  margin-top: 3rem;
+}
+footer .footercontainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 0rem;
+  padding: 1.2rem 2rem;
   font-size: 0.5rem;
 }
+footer a {
+  color: #000;
+}
+footer a:visited {
+  color: #000;
+}
 
+@media (max-width: 800px) {
+  footer {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  footer .footercontainer {
+    flex-direction: column;
+  }
+}
 .home {
   display: flex;
   flex-direction: column;
