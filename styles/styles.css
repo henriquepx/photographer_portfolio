@@ -16,6 +16,16 @@ html, body {
   background-color: rgb(255, 255, 255);
 }
 
+.cops {
+  position: absolute;
+  bottom: 15px;
+  left: 46%;
+  color: #949494;
+}
+.cops a {
+  color: #949494;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -328,9 +338,11 @@ header .headersize {
   align-items: center;
 }
 header .headersize .logo {
-  font-size: 1rem;
+  position: relative;
+  z-index: 3;
   cursor: pointer;
   font-weight: 600;
+  width: 5%;
 }
 header .headersize .menu {
   font-size: 1rem;
@@ -360,7 +372,7 @@ header .headersize .socialmediaheader {
   background-color: #000;
   z-index: 777;
 }
-.headercontainer.active h1 {
+.headercontainer.active img {
   color: white;
   transition: 0.3s;
 }
