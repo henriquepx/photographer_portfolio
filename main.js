@@ -19,7 +19,7 @@ MenuButton.addEventListener('click', () => {
     }
 });
 
-function slidesPlugin(activeSlide = 4) {
+function slidesPlugin(activeSlide = 0) {
 	const slides = document.querySelectorAll(".slide");
 
 	slides[activeSlide].classList.add("active");

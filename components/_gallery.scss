@@ -3,48 +3,55 @@
 .container {
 	width: 100%;
 	display: flex;
-	padding: 0 20px;
-
-    margin-top: 5rem;
-}
-
-.slide {
-	height: 60vh;
-	border-radius: 20px;
-	margin: 10px;
-	cursor: pointer;
-	color: #fff;
-	flex: 1;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	position: relative;
-	transition: all 0.7s ease-in-out;
-	filter: blur(2px);
-}
-
-.slide h3 {
-	position: absolute;
-	font-size: clamp(1rem, 5vw, 5rem);
-	bottom: 20px;
-	left: 20px;
-	margin: 0;
-	opacity: 0;
-	background-color: #e3fdf5;
-	background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.slide.active {
-	flex: 10;
-	filter: blur(0px);
-}
-
-.slide.active h3 {
-	opacity: 1;
-	transition: opacity 0.3s ease-in 0.4s;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	.slide {
+		height: 70vh;
+		border-radius: 20px;
+		margin: 10px;
+		cursor: pointer;
+		color: #fff;
+		flex: 1;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;
+		transition: all 0.7s ease-in-out;
+		filter: blur(2px);
+		h3 {
+			position: absolute;
+			font-size: clamp(1rem, 5vw, 5rem);
+			bottom: 20px;
+			left: 20px;
+			margin: 0;
+			opacity: 0;
+			background-color: #e3fdf5;
+			background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		p {
+			position: absolute;
+			font-size: 1rem;
+			bottom: 10px;
+			left: 24px;
+			opacity: 0;
+		}
+	}
+	.slide.active {
+		flex: 10;
+		filter: blur(0px);
+		h3 {
+			opacity: 1;
+			transition: opacity 0.3s ease-in 0.4s;
+		}
+		p {
+			opacity: 1;
+			transition: opacity 0.3s ease-in 0.4s;
+		}
+	}
 }
 
 @media screen and (max-width: 50rem) {
@@ -57,7 +64,6 @@
 		justify-content: center;
 		align-items: center;
 	}
-
 	.slide {
 		width: 90vw;
 		border-radius: 20px;
@@ -70,21 +76,18 @@
 		background-repeat: no-repeat;
 		position: relative;
 		transition: all 0.7s ease-in-out;
-		filter: blur(4px);
+		filter: blur(2px);
 	}
-
 	.slide.active {
 		flex: 10;
 		filter: blur(0px);
 	}
-
 	.slide h3 {
 		left: 5px;
 	}
 }
 
-
-
+/*
 .center .item {
     scroll-snap-align: center;
   }
@@ -130,3 +133,4 @@
       background-position: top;
     }
   }
+  */
