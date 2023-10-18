@@ -82,8 +82,12 @@
 		flex: 10;
 		filter: blur(0px);
 	}
-	.slide h3 {
-		left: 5px;
+	.slide.active h3 {
+		bottom: 30px;
+	}
+	.slide.active p {
+		bottom: 10px;
+		left: 25px;
 	}
 }
 

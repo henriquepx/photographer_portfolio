@@ -16,14 +16,12 @@ html, body {
   background-color: rgb(255, 255, 255);
 }
 
-.cops {
-  position: absolute;
-  bottom: 15px;
-  left: 46%;
-  color: #949494;
-}
-.cops a {
-  color: #949494;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 0rem;
+  font-size: 0.5rem;
 }
 
 .home {
@@ -344,6 +342,11 @@ header .headersize .logo {
   font-weight: 600;
   width: 5%;
 }
+@media (max-width: 499px) {
+  header .headersize .logo {
+    width: 10%;
+  }
+}
 header .headersize .menu {
   font-size: 1rem;
   cursor: pointer;
@@ -372,13 +375,12 @@ header .headersize .socialmediaheader {
   background-color: #000;
   z-index: 777;
 }
-.headercontainer.active img {
-  color: white;
-  transition: 0.3s;
-}
 .headercontainer.active a {
   color: white;
   transition: 0.3s;
+}
+.headercontainer.active .logo {
+  display: none;
 }
 
 .container {
@@ -463,8 +465,12 @@ header .headersize .socialmediaheader {
     flex: 10;
     filter: blur(0px);
   }
-  .slide h3 {
-    left: 5px;
+  .slide.active h3 {
+    bottom: 30px;
+  }
+  .slide.active p {
+    bottom: 10px;
+    left: 25px;
   }
 }
 /*

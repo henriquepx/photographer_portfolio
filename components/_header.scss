@@ -27,6 +27,9 @@ header {
             cursor: pointer;
             font-weight: 600;
             width: 5%;
+            @media (max-width: 499px) {
+                width: 10%;
+            }
         }
         .menu {
             font-size: 1rem;
@@ -49,20 +52,17 @@ header {
             }
         }
     }
-    
 }
 
 .headercontainer.active {
     animation: ShowingBg .7s ease-in-out; 
     background-color: #000;
     z-index: 777;
-    img {
-        color: white;
-        transition: .3s;
-    }
     a {
         color: white;
         transition: .3s;
     }
+    .logo {
+        display: none;
+    }
 }
-
