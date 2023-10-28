@@ -43,6 +43,19 @@ footer a:visited {
     flex-direction: column;
   }
 }
+.titlework {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 650;
+  margin-left: 1.2rem;
+  color: #000000;
+}
+.titlework span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: #000000;
+}
+
 .scrolldown {
   display: flex;
   justify-content: center;

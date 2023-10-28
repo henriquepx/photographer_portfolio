@@ -1,5 +1,18 @@
 @import '../abstract/variables';
 
+.titlework {
+    font-family: $font;
+    font-size: 1.2rem;
+    font-weight: 650;
+    margin-left: 1.2rem;
+    color: #000000;
+    span {
+        font-family: $font;
+        font-size: .8rem;
+        color: #000000;
+    }
+}
+
 .scrolldown {
     display: flex;
     justify-content: center;
