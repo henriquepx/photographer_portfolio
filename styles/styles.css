@@ -43,19 +43,67 @@ footer a:visited {
     flex-direction: column;
   }
 }
-.home {
+.scrolldown {
   display: flex;
-  flex-direction: column;
-  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
-.home .photocontainer {
-  position: relative;
+.scrolldown .container .chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
 }
-.home .photocontainer .photo {
-  width: 800px;
-  transition: transform 0.5s ease;
+.scrolldown .container .chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+.scrolldown .container .chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+.scrolldown .container .chevron:before,
+.scrolldown .container .chevron:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #3b3b3b;
+}
+.scrolldown .container .chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+.scrolldown .container .chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
 }
 
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
 @media (max-with: 450px) {
   .photo {
     width: 320px;
