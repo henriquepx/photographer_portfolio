@@ -57,70 +57,45 @@ footer a:visited {
 }
 
 .scrolldown {
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-}
-.scrolldown .container .chevron {
-  position: absolute;
-  width: 28px;
-  height: 8px;
-  opacity: 0;
-  transform: scale3d(0.5, 0.5, 0.5);
-  animation: move 3s ease-out infinite;
-}
-.scrolldown .container .chevron:first-child {
-  animation: move 3s ease-out 1s infinite;
-}
-.scrolldown .container .chevron:nth-child(2) {
-  animation: move 3s ease-out 2s infinite;
-}
-.scrolldown .container .chevron:before,
-.scrolldown .container .chevron:after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: #838383;
-}
-.scrolldown .container .chevron:before {
-  left: 0;
-  transform: skew(0deg, 30deg);
-}
-.scrolldown .container .chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skew(0deg, -30deg);
+  margin-top: 1.8rem;
+  cursor: pointer;
 }
 
-@keyframes move {
-  25% {
-    opacity: 1;
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 25px;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #000000;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
   }
-  33% {
+  10% {
+    transform: translateY(0);
     opacity: 1;
-    transform: translateY(30px);
-  }
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
   }
   100% {
+    transform: translateY(15px);
     opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
-}
-@keyframes pulse {
-  to {
-    opacity: 1;
-  }
-}
-@media (max-with: 450px) {
-  .photo {
-    width: 320px;
   }
 }
 .menubg {
@@ -426,7 +401,7 @@ header .headersize .logo {
   z-index: 3;
   cursor: pointer;
   font-weight: 600;
-  width: 5%;
+  width: 8%;
 }
 @media (max-width: 499px) {
   header .headersize .logo {
