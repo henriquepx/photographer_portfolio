@@ -57,6 +57,7 @@ footer a:visited {
 }
 
 .scrolldown {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,7 +271,7 @@ footer a:visited {
 .menubg.closed {
   display: flex;
   animation: ClosingBg 1.2s forwards;
-  z-index: 700;
+  z-index: 750;
 }
 
 @keyframes ShowingBg {
@@ -325,6 +326,11 @@ footer a:visited {
     margin-left: 1.5rem;
   }
 }
+.contactto {
+  height: 90vh;
+  width: 100%;
+}
+
 .menuhamburger {
   display: none;
   cursor: pointer;

@@ -151,7 +151,7 @@
 .menubg.closed {
     display: flex;
     animation: ClosingBg 1.2s forwards;
-    z-index: 700;
+    z-index: 750;
 }
 
 @keyframes ShowingBg {

@@ -40,3 +40,12 @@ function slidesPlugin(activeSlide = 0) {
 }
 
 slidesPlugin();
+
+
+
+const scrolldown = document.querySelector('.scrolldown');
+const content = document.querySelector('.contactto');
+
+scrolldown.addEventListener('click', () => {
+  content.scrollIntoView({ behavior: 'smooth' });
+});
