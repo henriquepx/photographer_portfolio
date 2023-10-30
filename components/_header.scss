@@ -26,9 +26,18 @@ header {
             z-index: 3;
             cursor: pointer;
             font-weight: 600;
-            width: 8%;
-            @media (max-width: 499px) {
-                width: 10%;
+            width: 7%;
+            @media (max-width: 450px) {
+                width: 30%;
+            }
+            @media (min-width: 451px) and (max-width: 768px) {
+                width: 17%;
+            }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                width: 12%;
+            }
+            @media (min-width: 1025px) {
+                width: 7%;
             }
         }
         .menu {

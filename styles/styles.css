@@ -359,11 +359,26 @@ header .headersize .logo {
   z-index: 3;
   cursor: pointer;
   font-weight: 600;
-  width: 8%;
+  width: 7%;
 }
-@media (max-width: 499px) {
+@media (max-width: 450px) {
   header .headersize .logo {
-    width: 10%;
+    width: 30%;
+  }
+}
+@media (min-width: 451px) and (max-width: 768px) {
+  header .headersize .logo {
+    width: 17%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  header .headersize .logo {
+    width: 12%;
+  }
+}
+@media (min-width: 1025px) {
+  header .headersize .logo {
+    width: 7%;
   }
 }
 header .headersize .menu {
